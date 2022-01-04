@@ -271,8 +271,16 @@
 
 // console.log(removeDuplicates([1,1, 2]));
 
-/*===========================================*/
+/*===================27========================*/
+var removeElement = function(nums, val) {
+    let p1 = 0
+    while (p1< nums.length) {
+        if (nums[p1] === val) {
+            nums.splice(p1, 1)
+        }else p1 ++
+    }
+    return nums
+};
 
-
-
+console.log(removeElement([3,3,3,2,2,3], 3));
 
