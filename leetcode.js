@@ -1,17 +1,32 @@
-/*=========================66======Error===================*/
+/*=========================66=========================*/
 
-const { timeEnd } = require("console");
+// const { timeEnd } = require("console");
 
 // var plusOne = function(digits) {
 //     digits = (BigInt(Number(digits.join(''))) + 1n).toString().split('').map(a => +a)
-//     // console.log(digits);
-//     // digits = digits
 //     console.log(digits);
 // };
 
 // plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3])
 
 
+
+var plusOne = function(digits) {
+    let lastIdx = digits.length - 1
+    for (let i = lastIdx; i >= 0; i--) {
+        if (digits[i] < 9)  {
+            digits[i]++
+            break;
+        } else if (digits[i] === 9) {
+            digits[i] = 0;
+            if (i === 0) {
+                digits.unshift(1)
+            }
+        }
+    }
+    return digits;
+}
+console.log(plusOne([1, 2, 9]));
 
 /*==========================Error================================*/
 
@@ -101,32 +116,89 @@ const { timeEnd } = require("console");
 
 // console.log(isHappy(19));
 
-/*=====================================================*/
+/*=====================476 & 1009================================*/
 
-var bitwiseComplement = function(n) {
-    let newNum = n.toString(2).split('')
-    newNum = parseInt(newNum.map(a => a === '1'? '0': '1').join(''), 2)
-    return newNum
-};
+// var bitwiseComplement = function(n) {
+//     let newNum = n.toString(2).split('')
+//     newNum = parseInt(newNum.map(a => a === '1'? '0': '1').join(''), 2)
+//     return newNum
+// };
 
-console.log(bitwiseComplement(1));
+// console.log(bitwiseComplement(1));
 
+/*=====================13================================*/
 
+// var romanToInt = function(s) {
+//     let num = 0
+//     let roman = {
+//         I: 1,
+//         V: 5,
+//         X: 10,
+//         L: 50,
+//         C: 100,
+//         D: 500,
+//         M: 1000
+//     }
 
+//     let len = s.length
+//     num = roman[s[len - 1]];
+//     for (let i = len - 2; i >= 0; i--) {
+//         if (roman[s[i]] < roman[s[i + 1]]) {
+//             num -= roman[s[i]];
+//         } else {
+//             num += roman[s[i]];
+//         }
+//     }
 
+//     return num;
+// };
+// console.log(romanToInt("MCMXCIV"));
 
+/*=====================14================================*/
 
+// var longestCommonPrefix = function(strs) {
+//     let result = ''
+//     for (let i = 0; i <= strs[0].length; i++) {
+//         const nextWord = strs[0].slice(0, i)
+//         if (strs.every(str => str.slice(0, i) === nextWord)) {
+//             result = nextWord
+//         }else break;
+        
+//     }
+//     return result
+// };
 
+// console.log(longestCommonPrefix(["racecar","car"]));
 
+/*=====================15===Error=============================*/
 
+// var threeSum = function(nums) {
+//     nums.sort()
+//     let keep = []
+//     let result = []
+//     if (nums.length < 1) {
+//         return result
+//     }
+//     for (let k = 0; k < nums.length; k++) {
+//         keep.push(nums[k])
+//         for (let i = 0; i < nums.length; i++) {
+//             if (k !== i) {
+//                 keep.push(nums[i])
+//                 if (keep.length === 3 && keep[0] + keep[1] + keep[2] === 0) {
+//                     result.push(keep)
+//                     keep = [nums[k]]
+//                 }
+//                 else if (keep.length > 3) {
+//                     keep = [nums[k]]
+//                 }
+//             }
+//         }
+//         return result
+//     }
+// };
+// console.log(threeSum([1,-1,-1,0]));
 
-
-
-
-
-
-
-
+/*===========================================================================================*/
 
 
 
