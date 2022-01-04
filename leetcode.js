@@ -286,15 +286,39 @@
 
 /*========================28=================================*/
 
-var strStr = function(haystack, needle) {
-    return haystack.indexOf(needle)
+// var strStr = function(haystack, needle) {
+//     return haystack.indexOf(needle)
+// };
+// console.log(strStr("aaaaaa", "bba"));
+
+/*============================================================*/
+// var searchInsert = function(nums, target) {
+//     let i = 0
+//     if (nums.indexOf(target) > 0) {
+//         return nums.indexOf(target)
+//     }else{
+//         while (i < nums.length) {
+//             if (nums[i] < target) {6
+//                 i++
+//                 continue
+//             }
+//             else{
+//                 return i
+//             }
+//         }
+//         return i
+//     }
+// };
+
+// console.log(searchInsert([1,3,5,6], 2));
+
+/*======================58================================*/
+
+var lengthOfLastWord = function(s) {
+    s = s.trim().split(' ').reverse()
+    return s[0].length
 };
-console.log(strStr("aaaaaa", "bba"));
-
-
-
-
-
+console.log(lengthOfLastWord("luffy is still joyboy"));
 
 
 
