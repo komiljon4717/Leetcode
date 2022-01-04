@@ -11,32 +11,39 @@
 
 
 
-var plusOne = function(digits) {
-    let lastIdx = digits.length - 1
-    for (let i = lastIdx; i >= 0; i--) {
-        if (digits[i] < 9)  {
-            digits[i]++
-            break;
-        } else if (digits[i] === 9) {
-            digits[i] = 0;
-            if (i === 0) {
-                digits.unshift(1)
-            }
-        }
-    }
-    return digits;
-}
-console.log(plusOne([1, 2, 9]));
+// var plusOne = function(digits) {
+//     let lastIdx = digits.length - 1
+//     for (let i = lastIdx; i >= 0; i--) {
+//         if (digits[i] < 9)  {
+//             digits[i]++
+//             break;
+//         } else if (digits[i] === 9) {
+//             digits[i] = 0;
+//             if (i === 0) {
+//                 digits.unshift(1)
+//             }
+//         }
+//     }
+//     return digits;
+// }
+// console.log(plusOne([1, 2, 9]));
 
 /*==========================Error================================*/
 
+// console.time()
 // var mergeTwoLists = function(list1, list2) {
-//     list1 = [...list1, ...list2]
-//     return list1.sort()
+//     const array = []
+//     while (list1.length && list2.length) {
+//         if (list1[0] < list2[0]) {
+//             array.push((list1.shift()))
+//         }else {
+//             array.push(list2.shift())
+//         }
+//     }
+//     return array.concat(list1.slice()).concat(list2.slice())
 // };
-
 // console.log(mergeTwoLists([1, 2, 4], [1, 3, 4]));
-
+// console.timeEnd()
 
 /*==========================error=======================================*/
 
@@ -198,20 +205,73 @@ console.log(plusOne([1, 2, 9]));
 // };
 // console.log(threeSum([1,-1,-1,0]));
 
-/*===========================================================================================*/
+/*=============================2===========error===================================================*/
+
+// var addTwoNumbers = function(l1, l2) {
+//    l1 = l1.reverse()
+//    l2 = l2.reverse()
+//    let res = []
+//    if (l1.length >= l2.length) {
+//        for (let i = l1.length - 1; i >= 0; i--) {
+//            let q = 0
+//            let b = 0
+//            if (l1[i] + l2[i] >= 10) {
+//                q = (l1[i] + l2[i]) % 10
+//                b = (l1[i] + l2[i]) / 10 | 0
+//                res.push(q + b)
+//            }
+           
+//        }
+//    }
+// };
+// console.log(addTwoNumbers([9,9,9,9,9,9,9], [9,9,9,9]));
+
+
+/*======================26================================*/
+
+// var removeDuplicates = function(nums) {
+//     for (let i = nums.length; i >= 0; i--) {
+//         for (let k = i - 1; k >= 0; k--) {
+//             if (nums[i] === nums[k]) {
+//                 nums.splice(k, 1)
+//             }
+//         }
+//     }
+//     return nums.length
+// };
+
+// console.log(removeDuplicates([1,1, 2]));
 
 
 
+// var removeDuplicates = function(nums) {
+//     let l1 = 0
+//     let l2 = 1
+
+//    while (l1 < nums.length) {
+//        if (nums[l1] === nums[l2]) {
+//             nums.splice(l1, 1)
+//        }else{
+//            l1++
+//            l2++
+//        }
+//    }
+//     return nums.length
+// };
+
+// console.log(removeDuplicates([1,1, 2]));
 
 
 
+// var removeDuplicates = function(nums) {
+//     nums = new Set(nums)
+//     nums = new Array(...nums)
+//     return nums
+// };
 
+// console.log(removeDuplicates([1,1, 2]));
 
-
-
-
-
-
+/*===========================================*/
 
 
 
