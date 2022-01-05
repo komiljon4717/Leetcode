@@ -562,28 +562,40 @@
 
 /*==========================434=========================================*/
 
-var countSegments = function(s) {
-    let res = []
-    if (s === '') {
-        return 0
-    }
-    s = s.split(' ')
-    for (let i = 0; i < s.length; i++) {
-        if (s[i] === ' ' || s[i] === '') {
-            continue   
-        }
-        else{
-            res.push(s[i])
-        }
+// var countSegments = function(s) {
+//     let res = []
+//     if (s === '') {
+//         return 0
+//     }
+//     s = s.split(' ')
+//     for (let i = 0; i < s.length; i++) {
+//         if (s[i] === ' ' || s[i] === '') {
+//             continue   
+//         }
+//         else{
+//             res.push(s[i])
+//         }
+        
+//     }
+//     return res.length
+// };
+
+// console.log(countSegments("Hello, my name is John"));
+
+/*=============================441=================================*/
+
+var arrangeCoins = function(n) {
+    let j = 1
+    let a = 0
+    while (a < n) {
+        j++
+        a+= j
         
     }
-    return res.length
+    return j -1 
 };
 
-console.log(countSegments("Hello, my name is John"));
-
-
-
+console.log(arrangeCoins(5));
 
 
 
