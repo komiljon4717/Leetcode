@@ -431,34 +431,55 @@
 
 /*=========================118===================================*/        
 
-var generate = function(numRows) {
-    let res = [[1], ]
-    if (numRows === 1) {
-        return res
-    }
+// var generate = function(numRows) {
+//     let res = [[1], ]
+//     if (numRows === 1) {
+//         return res
+//     }
     
-    for (let i = 0; i < numRows - 1; i++) {
-        let d = []
-        d.push(1)
-        for (let j = 0; j < res[i].length; j++) {
-            if (j !== res[i].length-1) {
-                d.push(res[i][j] + res[i][j + 1])
-            }
-        }
-        d.push(1)
-        res.push(d)
-    }
-    return res
+//     for (let i = 0; i < numRows - 1; i++) {
+//         let d = []
+//         d.push(1)
+//         for (let j = 0; j < res[i].length; j++) {
+//             if (j !== res[i].length-1) {
+//                 d.push(res[i][j] + res[i][j + 1])
+//             }
+//         }
+//         d.push(1)
+//         res.push(d)
+//     }
+//     return res
+// };
+
+// console.log(generate(5));
+
+/*==============================119================================*/
+
+// var generate = function(numRows) {
+//     let res = [[1], ]
+    
+//     for (let i = 0; i < numRows; i++) {
+//         let d = []
+//         d.push(1)
+//         for (let j = 0; j < res[i].length; j++) {
+//             if (j !== res[i].length-1) {
+//                 d.push(res[i][j] + res[i][j + 1])
+//             }
+//         }
+//         d.push(1)
+//         res.push(d)
+//     }
+//     return res[numRows]
+// };
+
+// console.log(generate(1));
+
+
+/*=================================125=================================*/
+
+var isPalindrome = function(s) {
+    
 };
-
-console.log(generate(5));
-
-
-
-
-
-
-
 
 
 
