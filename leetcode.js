@@ -175,7 +175,7 @@
 //     return result
 // };
 
-// console.log(longestCommonPrefix(["racecar","car"]));
+// console.log(longestCommonPrefix(["dog","racecar","car"]));
 
 /*=====================15===Error=============================*/
 
@@ -314,33 +314,120 @@
 
 /*======================58================================*/
 
-var lengthOfLastWord = function(s) {
-    s = s.trim().split(' ').reverse()
-    return s[0].length
-};
-console.log(lengthOfLastWord("luffy is still joyboy"));
+// var lengthOfLastWord = function(s) {
+//     s = s.trim().split(' ').reverse()
+//     return s[0].length
+// };
+// console.log(lengthOfLastWord("luffy is still joyboy"));
 
+/*============================204======error==========================*/
 
+// var countPrimes = function(n) {
+//     let res = 0
+//     for (let i = 2; i < n; i++) {
+//         let count = 0
+//         for (let k = 1; k <= i; k++) {
+//           if (i % k === 0) {
+//               ++count
+//             }
 
+//         }
+//         if (count === 2) {
+//             // console.log(i);
+//             res++
+//         }
+        
+//     }
+//     return res
+// };
+// console.log(countPrimes(3));
+/*==============================20======================================*/
 
+// var isValid = function(s) {
+//     let prs = {
+//         ')' : '(',
+//         ']' : '[',
+//         '}' : '{'
+//     }
+//     let stack = []
+//     for (const el of s) {
+//         if (prs[el]) {
+//             let last_el = stack.pop()
+//             if (last_el !== prs[el]) {
+//                 return false
+//             }
+//         }else{
+//             stack.push(el)
+//         }
+//     }
+//     return stack.length === 0
 
+// }
+// console.log(isValid("()[]{}"));
 
+/*===================131========error==================*/
 
+// var partition = function(s) {
+//     let res = []
+//     s = s[0].split('')
+//     res.push(s)
+//     if (s === s.reverse()) {
+//         res.push([s.join('')])
+//     }
+//     for (let i = 0; i < s.length; i++) {
+//         let keep = ''
+//         for (let k = i + 1; k < s.length; k++) {
+//             keep += s[i] + s[k]
+//             if (keep === s[k] + s[i]) {
+//                 res.push([keep])
+//             }else {
+//                 res.push([s[k]])
+//             }
+//         }
+//     }
+//     console.log(res);
+// };
 
+// partition(["aabaa"])
 
+/*============================53===============================*/
 
+// var maxSubArray = function(nums) {
+//     let res = 0
+//     res = nums.reduce((acc, val) => {
+//         acc += val
+//         return acc
+//     }, 0)
+//     let a = 0
+//     for (let i = 0; i < nums.length; i++) {
+//         a = 0
+//         for (let k = nums.length; k >= i; k--) {
+//             a += nums[k]
+//         }        
+//         if (res < a) {
+//             res = 0
+//         }
+//     }
+//     console.log(res);
+// };
+// maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
 
+/*=========================70====================================*/
 
+// var climbStairs = function(n) {
+//     if (n === 1 ) return 1
+//     let num1 = 1
+//     let num2 = 2
 
+//     for (let i = 3; i <= n; i++) {
+//         let num3 = num1 + num2
+//         num1 = num2
+//         num2 = num3
+//     }
+//     return num2
+// };
 
-
-
-
-
-
-
-
-
+// console.log(climbStairs(3));
 
 
 
