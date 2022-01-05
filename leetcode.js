@@ -477,26 +477,38 @@
 
 /*=================================125=================================*/
 
-var isPalindrome = function(s) {
-    s = s.toLowerCase()
-    let a = /^[a-z0-9]+$/i
-    let newWord = ''
-    for (let i = 0; i < s.length; i++) {
-        if (a.test(s[i])) {
-            newWord += s[i]
-        }
-    }
-     return newWord === newWord.split('').reverse().join('');
-};
+// var isPalindrome = function(s) {
+//     s = s.toLowerCase()
+//     let a = /^[a-z0-9]+$/i
+//     let newWord = ''
+//     for (let i = 0; i < s.length; i++) {
+//         if (a.test(s[i])) {
+//             newWord += s[i]
+//         }
+//     }
+//      return newWord === newWord.split('').reverse().join('');
+// };
 
-console.log(isPalindrome("rece a car"));
+// console.log(isPalindrome("rece a car"));
 
+/*=================================136=========================================*/
 
+// var singleNumber = function(nums) {
+//     for (let i = 0; i < nums.length; i++) {
+//         let count = 0
+//         for (let j = 0; j < nums.length; j++) {
+//             if (nums[i] === nums[j] && i !==j) {
+//                 count++
+//             }
+            
+//         }
+//         if (count === 0) {
+//             return nums[i]
+//         }
+//     }
+// };
 
-
-
-
-
+// console.log(singleNumber([2, 2, 1]));
 
 
 
