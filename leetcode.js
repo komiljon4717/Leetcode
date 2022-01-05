@@ -512,33 +512,45 @@
 
 
 /*=============================412==============================*/
-var fizzBuzz = function(n) {
-    let res = []
-    for (let i = 1; i <= n; i++) {
-        if (i % 3 ===0 && i % 5 === 0) {
-            res.push('FizzBuzz')
-            continue
-        }
-        if (i % 3 === 0) {
-            res.push('Fizz')
-            continue
-        }
-        if (i % 5 === 0) {
-            res.push('Buzz')
-            continue
-        }
-        else res.push(`${i}`)
+// var fizzBuzz = function(n) {
+//     let res = []
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 3 ===0 && i % 5 === 0) {
+//             res.push('FizzBuzz')
+//             continue
+//         }
+//         if (i % 3 === 0) {
+//             res.push('Fizz')
+//             continue
+//         }
+//         if (i % 5 === 0) {
+//             res.push('Buzz')
+//             continue
+//         }
+//         else res.push(`${i}`)
         
+//     }
+//     return res
+// };
+
+// console.log(fizzBuzz(15));
+
+/*============================414============================*/
+
+var thirdMax = function(nums) {
+    nums = Array.from(new Set(nums))
+    if (nums.length < 3) {
+        return Math.max(...nums)
     }
-    return res
+
+    for (let i = 0; i < 2; i++) {
+        let max = Math.max(...nums)
+        nums.splice(nums.indexOf(max), 1)
+    }
+    return Math.max(...nums)
 };
 
-console.log(fizzBuzz(15));
-
-
-
-
-
+console.log(thirdMax([1,1, 1]));
 
 
 
