@@ -537,31 +537,50 @@
 
 /*============================414============================*/
 
-var thirdMax = function(nums) {
-    nums = Array.from(new Set(nums))
-    if (nums.length < 3) {
-        return Math.max(...nums)
-    }
+// var thirdMax = function(nums) {
+//     nums = Array.from(new Set(nums))
+//     if (nums.length < 3) {
+//         return Math.max(...nums)
+//     }
 
-    for (let i = 0; i < 2; i++) {
-        let max = Math.max(...nums)
-        nums.splice(nums.indexOf(max), 1)
+//     for (let i = 0; i < 2; i++) {
+//         let max = Math.max(...nums)
+//         nums.splice(nums.indexOf(max), 1)
+//     }
+//     return Math.max(...nums)
+// };
+
+// console.log(thirdMax([1,1, 1]));
+
+/*==============================415=================================*/
+
+// var addStrings = function(num1, num2) {
+//     num1 = +num1 + num2
+//     return num1 + ''
+// };
+
+
+/*==========================434=========================================*/
+
+var countSegments = function(s) {
+    let res = []
+    if (s === '') {
+        return 0
     }
-    return Math.max(...nums)
+    s = s.split(' ')
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === ' ' || s[i] === '') {
+            continue   
+        }
+        else{
+            res.push(s[i])
+        }
+        
+    }
+    return res.length
 };
 
-console.log(thirdMax([1,1, 1]));
-
-
-
-
-
-
-
-
-
-
-
+console.log(countSegments("Hello, my name is John"));
 
 
 
