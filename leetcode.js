@@ -478,10 +478,18 @@
 /*=================================125=================================*/
 
 var isPalindrome = function(s) {
-    
+    s = s.toLowerCase()
+    let a = /^[a-z0-9]+$/i
+    let newWord = ''
+    for (let i = 0; i < s.length; i++) {
+        if (a.test(s[i])) {
+            newWord += s[i]
+        }
+    }
+     return newWord === newWord.split('').reverse().join('');
 };
 
-
+console.log(isPalindrome("rece a car"));
 
 
 
