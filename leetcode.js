@@ -639,31 +639,56 @@
 
 
 /*=======================507=====================*/
-var checkPerfectNumber = function(num) {
-    let res = 0
-    let i = 1
-    while (i <= num / 2 | 0) {
-        if (num % i === 0) {
-            res += i
-        }   
-        i++
-    }
-    return res === num? true: false;
+// var checkPerfectNumber = function(num) {
+//     let res = 0
+//     for (let i = 1; i <= num / 2 | 0; i++) {
+//         if (num % i === 0) {
+//             res += i
+//         }
+        
+//     }
+//     return res === num? true: false;
+// };
+
+// console.log(checkPerfectNumber(7));
+
+/*========================506=======================================*/
+
+// var findRelativeRanks = function(score) {
+//     let test = [...score]
+    
+//     for (let i = 0; i < score.length; i++) {
+
+//         let max = Math.max(...test)
+//         let index = test.indexOf(max)
+//         test.splice(index, 1)
+//         if (i === 0) {
+//             score[score.indexOf(max)] = "Gold Medal" 
+//         }
+//         else if (i === 1) {
+//             score[score.indexOf(max)] = "Silver Medal"
+//         }
+//         else if (i === 2) {
+//             score[score.indexOf(max)] = "Bronze Medal"
+//         }
+//         else{
+//             score[score.indexOf(max)] = i + 1 + ''
+//         }
+        
+//     }
+//     return score
+// };
+
+// console.log(findRelativeRanks([10,3,8,9,4]));
+
+
+/*=================================504====================================*/
+
+var convertToBase7 = function(num) {
+    return num.toString(7)
 };
 
-console.log(checkPerfectNumber(28));
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(convertToBase7(-7));
 
 
 
