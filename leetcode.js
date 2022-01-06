@@ -392,25 +392,20 @@
 
 /*============================53===============================*/
 
-// var maxSubArray = function(nums) {
-//     let res = 0
-//     res = nums.reduce((acc, val) => {
-//         acc += val
-//         return acc
-//     }, 0)
-//     let a = 0
-//     for (let i = 0; i < nums.length; i++) {
-//         a = 0
-//         for (let k = nums.length; k >= i; k--) {
-//             a += nums[k]
-//         }        
-//         if (res < a) {
-//             res = 0
-//         }
-//     }
-//     console.log(res);
-// };
-// maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+var maxSubArray = function(nums) {
+    let maxSub = nums[0]
+    let curSum = 0
+    for (let i = 0; i < nums.length; i++) {
+        if (curSum < 0) {
+            curSum = 0
+        }
+        curSum += nums[i]
+        maxSub = Math.max(maxSub, curSum)
+    }
+    return maxSub
+    
+};
+console.log(maxSubArray([1]));
 
 /*=========================70====================================*/
 
@@ -554,12 +549,12 @@
 
 /*==============================415=================================*/
 
-// var addStrings = function(num1, num2) {
-//     num1 = +num1 + num2
-//     return num1 + ''
-// };
-
-
+var addStrings = function(num1, num2) {
+    return BigInt(num1) + BigInt(num2) + ''
+};
+console.log(addStrings("9333852702227987",
+"85731737104263")
+);
 /*==========================434=========================================*/
 
 // var countSegments = function(s) {
@@ -584,18 +579,18 @@
 
 /*=============================441=================================*/
 
-var arrangeCoins = function(n) {
-    let j = 1
-    let a = 0
-    while (a < n) {
-        j++
-        a+= j
+// var arrangeCoins = function(n) {
+//     let j = 1
+//     let a = 0
+//     while (a < n) {
+//         j++
+//         a+= j
         
-    }
-    return j -1 
-};
+//     }
+//     return j -1 
+// };
 
-console.log(arrangeCoins(5));
+// console.log(arrangeCoins(5));
 
 
 
