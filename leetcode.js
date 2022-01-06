@@ -731,26 +731,43 @@
 
 /*=================================485====================================*/
 
-var findMaxConsecutiveOnes = function(nums) {
-    let res = 0
-    let count = 0
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === 1) {
-            ++count
-            if (res < count) {
-                res = count
-            }
-        }else count = 0
+// var findMaxConsecutiveOnes = function(nums) {
+//     let res = 0
+//     let count = 0
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] === 1) {
+//             ++count
+//             if (res < count) {
+//                 res = count
+//             }
+//         }else count = 0
+//     }
+//     return res
+// };
+
+// console.log(findMaxConsecutiveOnes([1,0,1,1,0,1]));
+
+
+/*==============================520====================================*/
+
+var detectCapitalUse = function(word) {
+    if (word === word.toUpperCase()) {
+        return true
     }
-    return res
+    else if (word === word.toLowerCase()) {
+        return true
+    }
+    else if (word[0] === word[0].toUpperCase() && word[1] === word[1].toLowerCase()) {
+        for (let i = 1; i < word.length; i++) {
+            if (word[i] === word[i].toLowerCase()) {
+                continue
+            }else return false
+        }
+        return true
+    }
+    else return false
 };
-
-console.log(findMaxConsecutiveOnes([1,0,1,1,0,1]));
-
-
-
-
-
+console.log(detectCapitalUse("Leetcode"));
 
 
 
