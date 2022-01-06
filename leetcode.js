@@ -684,19 +684,68 @@
 
 /*=================================504====================================*/
 
-var convertToBase7 = function(num) {
-    return num.toString(7)
+// var convertToBase7 = function(num) {
+//     return num.toString(7)
+// };
+
+// console.log(convertToBase7(-7));
+
+
+/*=================================500======error==============================*/
+
+// var findWords = function(words) {
+//     let zax = [...words]
+//     let res = []
+//     let firstRow = "qwertyuiop".split('')
+//     let secondRow = "asdfghjkl".split('')
+//     let thirdRow = "zxcvbnm".split('')
+    
+
+//     for (let i = 0; i < words.length; i++) {
+//         words[i] = words[i].toLowerCase()
+//         let word = words[i].split('')
+//         let keep = ''
+//         for (let k = 0; k < word.length; k++) {
+//             if (firstRow.includes(word[k]) && firstRow.includes(word[k + 1])) {
+//                 k === 0? keep += word[k].toUpperCase():keep += word[k]
+//             }
+//             else if (secondRow.includes(word[k])) {
+//                 k === 0? keep += word[k].toUpperCase():keep += word[k]
+//             }
+//             else if (thirdRow.includes(word[k])) {
+//                 k === 0? keep += word[k].toUpperCase():keep += word[k]
+//             }
+//             else break
+            
+//         }
+//         if (zax.includes(keep)) {
+//             res.push(keep)
+//         }
+        
+//     }
+
+//     return res
+// };
+
+// console.log(findWords(["Hello","Alaska","Dad","Peace"]));
+
+/*=================================485====================================*/
+
+var findMaxConsecutiveOnes = function(nums) {
+    let res = 0
+    let count = 0
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 1) {
+            ++count
+            if (res < count) {
+                res = count
+            }
+        }else count = 0
+    }
+    return res
 };
 
-console.log(convertToBase7(-7));
-
-
-
-
-
-
-
-
+console.log(findMaxConsecutiveOnes([1,0,1,1,0,1]));
 
 
 
