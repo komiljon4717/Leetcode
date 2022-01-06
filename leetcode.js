@@ -750,26 +750,41 @@
 
 /*==============================520====================================*/
 
-var detectCapitalUse = function(word) {
-    if (word === word.toUpperCase()) {
-        return true
+// var detectCapitalUse = function(word) {
+//     if (word === word.toUpperCase()) {
+//         return true
+//     }
+//     else if (word === word.toLowerCase()) {
+//         return true
+//     }
+//     else if (word[0] === word[0].toUpperCase() && word[1] === word[1].toLowerCase()) {
+//         for (let i = 1; i < word.length; i++) {
+//             if (word[i] === word[i].toLowerCase()) {
+//                 continue
+//             }else return false
+//         }
+//         return true
+//     }
+//     else return false
+// };
+// console.log(detectCapitalUse("Leetcode"));
+
+/*=============================509===================================*/
+
+var fib = function(n) {
+    let fib1 = 0
+    let fib2 = 1
+    let fib3 = 0
+    for (let i = 0; i < n; i++) {
+        fib3 = fib1 + fib2
+        fib1 = fib2
+        fib2 = fib3
+        
     }
-    else if (word === word.toLowerCase()) {
-        return true
-    }
-    else if (word[0] === word[0].toUpperCase() && word[1] === word[1].toLowerCase()) {
-        for (let i = 1; i < word.length; i++) {
-            if (word[i] === word[i].toLowerCase()) {
-                continue
-            }else return false
-        }
-        return true
-    }
-    else return false
+    return fib1
 };
-console.log(detectCapitalUse("Leetcode"));
 
-
+console.log(fib(0));
 
 
 
