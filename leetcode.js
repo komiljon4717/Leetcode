@@ -392,20 +392,20 @@
 
 /*============================53===============================*/
 
-var maxSubArray = function(nums) {
-    let maxSub = nums[0]
-    let curSum = 0
-    for (let i = 0; i < nums.length; i++) {
-        if (curSum < 0) {
-            curSum = 0
-        }
-        curSum += nums[i]
-        maxSub = Math.max(maxSub, curSum)
-    }
-    return maxSub
+// var maxSubArray = function(nums) {
+//     let maxSub = nums[0]
+//     let curSum = 0
+//     for (let i = 0; i < nums.length; i++) {
+//         if (curSum < 0) {
+//             curSum = 0
+//         }
+//         curSum += nums[i]
+//         maxSub = Math.max(maxSub, curSum)
+//     }
+//     return maxSub
     
-};
-console.log(maxSubArray([1]));
+// };
+// console.log(maxSubArray([1]));
 
 /*=========================70====================================*/
 
@@ -549,12 +549,13 @@ console.log(maxSubArray([1]));
 
 /*==============================415=================================*/
 
-var addStrings = function(num1, num2) {
-    return BigInt(num1) + BigInt(num2) + ''
-};
-console.log(addStrings("9333852702227987",
-"85731737104263")
-);
+// var addStrings = function(num1, num2) {
+//     return BigInt(num1) + BigInt(num2) + ''
+// };
+// console.log(addStrings("9333852702227987",
+// "85731737104263")
+// );
+
 /*==========================434=========================================*/
 
 // var countSegments = function(s) {
@@ -592,15 +593,49 @@ console.log(addStrings("9333852702227987",
 
 // console.log(arrangeCoins(5));
 
+/*=========================6 Medium======================================*/
+
+// var convert = function(s, numRows) {
+//     let res = []
+//     let step = 1
+//     let index = 0;
+//     for (let i = 0; i < s.length; i++) {
+//         if (res[index] === undefined) {
+//             res[index] = ''
+//         }
+//         res[index] += s[i]  
+//         if (index === 0) {
+//             step = 1
+//         }
+//         else if (index === numRows - 1) {
+//             step = -1
+//         }
+//         index += step;
+//     }
+//     return res.join('')
+// };
 
 
+// console.log(convert("PAYPALISHIRING", 3));
 
+/*=======================================================*/
 
-
-
-
-
-
+var canBeIncreasing = function(nums) {
+    let count = 0
+    for (let i = 0; i < nums.length - 1; i++) {
+        if(nums[i] >= nums[i + 1]){
+            count++
+            if(i > 0 && nums[i - 1] >= nums[i + 1]){
+                nums[i + 1] = nums[i];
+            }
+        }
+        if(count > 1){
+            return false
+        }
+    }
+    return true
+}
+console.log(canBeIncreasing([105, 428, 32, 468]));
 
 
 
