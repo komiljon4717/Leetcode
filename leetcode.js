@@ -618,30 +618,40 @@
 
 // console.log(convert("PAYPALISHIRING", 3));
 
-/*=======================================================*/
+/*=========================1909==============================*/
 
-var canBeIncreasing = function(nums) {
-    let count = 0
-    for (let i = 0; i < nums.length - 1; i++) {
-        if(nums[i] >= nums[i + 1]){
-            count++
-            if(i > 0 && nums[i - 1] >= nums[i + 1]){
-                nums[i + 1] = nums[i];
-            }
-        }
-        if(count > 1){
-            return false
-        }
+// var canBeIncreasing = function(nums) {
+//     let count = 0
+//     for (let i = 0; i < nums.length - 1; i++) {
+//         if(nums[i] >= nums[i + 1]){
+//             count++
+//             if(i > 0 && nums[i - 1] >= nums[i + 1]){
+//                 nums[i + 1] = nums[i];
+//             }
+//         }
+//         if(count > 1){
+//             return false
+//         }
+//     }
+//     return true
+// }
+// console.log(canBeIncreasing([105, 428, 32, 468]));
+
+
+/*=======================507=====================*/
+var checkPerfectNumber = function(num) {
+    let res = 0
+    let i = 1
+    while (i <= num / 2 | 0) {
+        if (num % i === 0) {
+            res += i
+        }   
+        i++
     }
-    return true
-}
-console.log(canBeIncreasing([105, 428, 32, 468]));
+    return res === num? true: false;
+};
 
-
-
-
-
-
+console.log(checkPerfectNumber(28));
 
 
 
